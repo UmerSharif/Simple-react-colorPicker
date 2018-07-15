@@ -6,19 +6,33 @@ class FormParent extends React.Component {
         super(props);
 
         this.state = {
-            color: 'white'
-        }
+            bgColor: 'teal'
+        };
         this.changeName = this.changeName.bind(this);
     }
 
+    updateBackgroundColor(){
+        let body = document.querySelector('body');
+        body.style.background = this.state.bgColor;
+    }
+
+    componentDidMount() {
+      this.updateBackgroundColor();
+    }
+
+    componentDidUpdate(){
+        this.updateBackgroundColor();
+    }
+
+
     changeName(newColor){
 
-        this.setState({color:newColor});
+        this.setState({bgColor:newColor});
     }
 
     render(){
         return(
-            <FormChild color = {this.state.color} onChange={this.changeName}/>
+            <FormChild color = {this.state.bgColor} onChange={this.changeName}/>
         );
     }
 }

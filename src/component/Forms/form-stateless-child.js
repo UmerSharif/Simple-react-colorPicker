@@ -22,9 +22,10 @@ class FormChild extends React.Component {
                     The color is : {this.props.color}
                 </h1>
                 <select name="switchColor" id="change-color" onChange={this.handleColor}>
-                    <option value="Red">Red</option>
-                    <option value="Green">Green</option>
-                    <option value="Blue">Blue</option>
+                    <option value="teal">teal</option>
+                    <option value="orange">orange</option>
+                    <option value="indigo">indigo</option>
+                    <option value="red">red</option>
                 </select>
 
             </div>
